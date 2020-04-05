@@ -5,7 +5,7 @@ import random
 import time
 
 
-def check(my_red):
+def check_inbox(my_red):
     for message in my_red.inbox.unread(limit=None):
         subject = message.subject.lower()
         print(subject)
@@ -55,5 +55,5 @@ def check(my_red):
 
 while True:
     red_inst = praw.Reddit(private_info)
-    check(red_inst)
+    check_inbox(red_inst)
     time.sleep(5)
